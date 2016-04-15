@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Proctors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proctors.each do |proctor| %>
+      <tr>
+        <td><%= proctor.name %></td>
+        <td><%= link_to 'Show', proctor %></td>
+        <td><%= link_to 'Edit', edit_proctor_path(proctor) %></td>
+        <td><%= link_to 'Destroy', proctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proctor', new_proctor_path %>

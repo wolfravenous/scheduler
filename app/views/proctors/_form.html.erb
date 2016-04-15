@@ -1,0 +1,21 @@
+<%= form_for(@proctor) do |f| %>
+  <% if @proctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proctor.errors.count, "error") %> prohibited this proctor from being saved:</h2>
+
+      <ul>
+      <% @proctor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

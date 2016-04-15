@@ -1,0 +1,16 @@
+<% title(@block.day, "Blocks") %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @block.day %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @block.time %>
+</p>
+
+<%= link_to 'Edit', edit_block_path(@block) %> |
+<%= link_to 'Back', blocks_path %>
