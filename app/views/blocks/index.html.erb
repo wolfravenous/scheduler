@@ -14,10 +14,10 @@
   <tbody>
     <% @blocks.each do |block| %>
       <tr>
-        <td><%= block.day %></td>
+        <td><%= link_to block.day, block %></td>
         <td><%= block.time %></td>
-        <td><%= link_to 'Show', block %></td>
-        <td><%= link_to 'Edit', edit_block_path(block) %></td>
+<!--         <td><%= link_to 'Show', block %></td>
+ -->        <td><%= link_to 'Edit', edit_block_path(block) %></td>
         <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

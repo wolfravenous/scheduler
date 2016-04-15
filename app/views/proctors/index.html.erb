@@ -13,8 +13,8 @@
   <tbody>
     <% @proctors.each do |proctor| %>
       <tr>
-        <td><%= proctor.name %></td>
-        <td><%= link_to 'Show', proctor %></td>
+        <td><%= link_to proctor.name, proctor %></td>
+<!--         <td><%= link_to 'Show', proctor %></td> -->
         <td><%= link_to 'Edit', edit_proctor_path(proctor) %></td>
         <td><%= link_to 'Destroy', proctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

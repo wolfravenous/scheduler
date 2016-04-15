@@ -13,9 +13,9 @@
   <tbody>
     <% @advisors.each do |advisor| %>
       <tr>
-        <td><%= advisor.name %></td>
-        <td><%= link_to 'Show', advisor %></td>
-        <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
+        <td><%= link_to advisor.name, advisor %></td>
+<!--         <td><%= link_to 'Show', advisor %></td>
+ -->        <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
         <td><%= link_to 'Destroy', advisor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

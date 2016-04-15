@@ -49,6 +49,8 @@ group :development do
 group :test do
   # browser simulator in Ruby that is used for integration testing
   gem "capybara", "~> 2.4"
+  # provides an easy way to use factories to create new objects for your tests
+  gem "factory_girl_rails", "~> 4.5"
 
 end
 
